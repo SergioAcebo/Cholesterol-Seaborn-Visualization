@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("C:/Users/VORPC/Documents/Prácticas/Ejercicios/Ejercicios Tema 4/Ejercicio 4.5.csv")
+df = pd.read_csv("C:/Users/VORPC/Downloads/patients.csv")
 
 #1.- Elabora un countplot que divida a los pacientes en función de su IMC_CAT
 sns.countplot(data=df, x="IMC_CAT", hue="IMC_CAT", palette="colorblind", legend= False)
@@ -56,7 +56,7 @@ plt.show()
 fig, axs =plt.subplots(1,2, figsize = (14,5))
 
 sns.barplot(data=df, x="IMC_CAT", y="Colesterol", hue="IMC_CAT", palette="muted", errorbar= "sd", err_kws={"linewidth":2}, capsize=0.3, ax=axs[0]) #No olvides los ejes
-axs[0].set_title("Relación entre IMC y Colesterol")                           #err_kws grosor errorbar // capsize tamaño de las barras horizontales
+axs[0].set_title("Relación entre IMC y Colesterol")                           
 axs[0].set_xlabel("Categorías de IMC")
 axs[0].set_ylabel("Nivel de Colesterol  en sangre (mg/dl)")
 
